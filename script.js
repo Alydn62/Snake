@@ -24,6 +24,23 @@ colorControl.addEventListener('input', (e) => {
   snakeColor = e.target.value;
 });
 
+// Event listeners untuk tombol kontrol
+document.getElementById('up').addEventListener('click', () => {
+  if (direction !== 'down') direction = 'up';
+});
+
+document.getElementById('down').addEventListener('click', () => {
+  if (direction !== 'up') direction = 'down';
+});
+
+document.getElementById('left').addEventListener('click', () => {
+  if (direction !== 'right') direction = 'left';
+});
+
+document.getElementById('right').addEventListener('click', () => {
+  if (direction !== 'left') direction = 'right';
+});
+
 // Draw game map, snake, food
 function draw() {
   board.innerHTML = '';
